@@ -11,44 +11,14 @@
             height: 300px;
         }
     </style>
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6pIxutLx4IiBSFgZUtToPSR8Sec2qm9g&sensor=false"></script>
-        
-        <script type="text/javascript">
-            // When the window has finished loading create our google map below
-            google.maps.event.addDomListener(window, 'load', init);
-        
-            function init() {
-                // Basic options for a simple Google Map
-                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-                var mapOptions = {
-                    // How zoomed in you want the map to start at (always required)
-                    zoom: 12,
 
-                    // The latitude and longitude to center the map (always required)
-                    center: new google.maps.LatLng(39.757345, -105.00849299999999),// New York
-
-
-
-                    // How you would like to style the map. 
-                    // This is where you would paste any style found on Snazzy Maps.
-                    styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]}]
-                };
-
-                // Get the HTML DOM element that will contain your map 
-                // We are using a div with id="map" seen below in the <body>
-                var mapElement = document.getElementById('map');
-
-                // Create the Google Map using out element and options defined above
-                var map = new google.maps.Map(mapElement, mapOptions);
-            }
-        </script>
 
 </head>
 
 <body>
 	<div id="container">
 		<div id="header">
-			<div id="logo"></div>
+			<img class="logo"src="img/badge_animated@2x.gif" alt="logo">
 			<h1>WELCOME TO<br>THE ORDER</h1>
 		</div>
 
@@ -64,13 +34,14 @@
 
 		<div id="details">
 			<div id="info">
-			<p class="invite-A">The Secret order of<br>
-				meaningful impact<br></p>
-				<p class="invite-B">INVITES YOU<br></p>
-				<p class="invite-A">to join us for<br></p>
-				<p class="invite-C">LIBATIONS<br></p>
-				<p class="invite-C">CONVERSATIONS<br></p>
-				<p class="invite-C">MISCHIEF<br></p>
+			<h4>The Secret order of<br>
+				meaningful impact<br></h4>
+				<h2>INVITES YOU<br></h2>
+				<h4>to join us for<br></h4>
+				<h3>LIBATIONS<br></h3>
+				<h3>CONVERSATIONS<br></h3>
+				<h3>MISCHIEF<br></h3>
+			<div><hr class="style-two"></div>
 			<div id="date">
 				<p>9.11.14</p>
 			</div>
@@ -83,7 +54,41 @@
 		</div>
 
 		<div id="map">
+			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6pIxutLx4IiBSFgZUtToPSR8Sec2qm9g&sensor=false"></script>
+		        
+		        <script type="text/javascript">
+		            // When the window has finished loading create our google map below
+		            google.maps.event.addDomListener(window, 'load', init);
+		        
+		            function init() {
+		                // Basic options for a simple Google Map
+		                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+		                var myLatlng = new google.maps.LatLng(39.757345,-105.00849299999999);
+						var marker = new google.maps.Marker({map: map,position: myLatlng});
+						var infowindow = new google.maps.InfoWindow({content:"<b>St Ellie</b><br/>1553 Platte St<br/>80202 Denver" });
+		                var mapOptions = {
+		                    // How zoomed in you want the map to start at (always required)
+		                    zoom: 15,
 
+		                    // The latitude and longitude to center the map (always required)
+		                    center: myLatlng,
+		                    // How you would like to style the map. 
+		                    // This is where you would paste any style found on Snazzy Maps.
+		                    styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]}]
+		                };
+
+		                // Get the HTML DOM element that will contain your map 
+		                // We are using a div with id="map" seen below in the <body>
+		                var mapElement = document.getElementById('map');
+		                // Create the Google Map using out element and options defined above
+		                var map = new google.maps.Map(mapElement, mapOptions, marker, infowindow);
+		                // To add the marker to the map, call setMap();
+						marker.setMap(map);
+						google.maps.event.addListener(marker, 'click', function() {infowindow.open(map,marker);});
+
+
+		            }
+		        </script>
 		</div>
 </div><!--end container-->
 </body>
