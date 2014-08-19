@@ -3,44 +3,15 @@ $(function(){
 	// container is the DOM element;
 	// userText is the textbox
 	
-	var container = $("h5")
-		userText = $('#userText'); 
-	
+	var part1 = $("#part1"),
+		part2 = $('#part2'); 
+		
+
 	// Shuffle the contents of container
-	container.shuffleLetters();
+	$.when($.part1.shuffleLetters()).then(function(){
+		part2.shuffleLetters();
+	});
 
-	// Bind events
-	userText.click(function () {
-		
-	  userText.val("");
-	  
-	}).bind('keypress',function(e){
-		
-		if(e.keyCode == 13){
-			
-			// The return key was pressed
-			
-			container.shuffleLetters({
-				"text": userText.val()
-			});
-			
-			userText.val("");
-		}
 
-	}).hide();
-
-	// Leave a 4 second pause
-
-	setTimeout(function(){
-		
-		// Shuffle the container with custom text
-		container.shuffleLetters({
-			"text": "Test it for yourself!"
-		});
-		
-		userText.val("type anything and hit return..").fadeIn();
-		
-	},4000);
 	
 });
-
