@@ -16,14 +16,17 @@
 </head>
 
 <body>
+
 	<div id="container">
+
 		<div id="header">
 			<a href="meaningful.html" target="_blank"><img class="logo"src="img/badge_animated@2x.gif" alt="logo"></a>
 			<h1>WELCOME TO<br>THE ORDER</h1>
+			<h4 class="presented">presented by effective ui</h4>
 		</div>
 
-		<div id="article">
-			<p>we, the holders of the keys of destiny, Tumblr mumblecore chia vegan, occupy roof party biodiesel American Apparel. Ethnic normcore actually, shabby chic skateboard disrupt roof party fixie locavore selvage. Tumblr locavore pork belly sriracha actually, try-hard craft beer Helvetica food truck.</p>
+		<div id="manifesto">
+			<h5>we, the holders of the keys of destiny, Tumblr mumblecore chia vegan, occupy roof party biodiesel American Apparel. Ethnic normcore actually, shabby chic skateboard disrupt roof party fixie locavore selvage. Tumblr locavore pork belly sriracha actually, try-hard craft beer Helvetica food truck.</h5>
 			<div id="icons">
 				<img src="img/icons.png" alt="icons">
 			</div>
@@ -50,10 +53,9 @@
 			</div>
 			<h4>Please R.S.V.P</h4>
 			<div><hr class="style-two"></div>
-				<a href="mailto:meaningfulimpact@effectiveui.com?subject=I whole-heartedly commit my soul to the Order" class="rsvp" >I WIll ATTEND</a>
-				<a href="mailto:meaningfulimpact@effectiveui.com?subject=I do not believe in Meanigful Impact" class="rsvp" >I MUST DECLINE</a>
+				<a href="mailto:meaningfulimpact@effectiveui.com?subject=I whole-heartedly commit my soul to the Order&body=I'll be there on September 11th, but I might be fashionably later than 7PM." class="rsvp" >I WIll ATTEND</a>
+				<a href="mailto:meaningfulimpact@effectiveui.com?subject=I do not believe in Meanigful Impact&body=Nor can I make it to your event on September 11th. I think I have a dentist appointment that night." class="rsvp" >I MUST DECLINE</a>
 			</div>
-
 		</div>
 
 		<div id="map">
@@ -68,7 +70,7 @@
 		                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
 		                var myLatlng = new google.maps.LatLng(39.757345,-105.00849299999999);
 						var marker = new google.maps.Marker({map: map,position: myLatlng});
-						var infowindow = new google.maps.InfoWindow({content:"<b>St Ellie</b><br/>1553 Platte St<br/>80202 Denver" });
+						var infowindow = new google.maps.InfoWindow({content:"<b>St. Ellie</b><br/>1553 Platte St<br/>80202 Denver" });
 		                var mapOptions = {
 		                    // How zoomed in you want the map to start at (always required)
 		                    zoom: 15,
@@ -94,5 +96,10 @@
 		        </script>
 		</div>
 </div><!--end container-->
+
+        <!-- JavaScript includes -->
+		<script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
+		<script src="js/jquery.shuffleLetters.js"></script>
+        <script src="js/script.js"></script>
 </body>
 </html>
